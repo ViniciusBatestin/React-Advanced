@@ -7,7 +7,8 @@ function DessertsList(props) {
     return a.calories - b.calories;
   })
   .map((dessert) => {
-    return <li>{dessert.name} - {dessert.calories}</li>;
+    // Not the correct way but i just add the key in order to learn the process with keys, the correct would be to have an id per item.
+    return <li key={dessert.createdAt}>{dessert.name} - {dessert.calories}</li>;
   })
 
   return<ul>{lowCalories}</ul>
